@@ -5,7 +5,7 @@ import {
   getCountry,
   createCountry,
   updateCountry,
-  deleteCountry
+  deleteCountry,
 } from "../controllers/country.controller.js";
 
 const countryRouter = Router();

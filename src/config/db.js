@@ -3,6 +3,10 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const connection = mysql.createConnection(process.env.DATABASE_URL);
+const pool = mysql.createPool({
+  uri: process.env.MYSQL_URI,
+  multipleStatements: true,
+});
 
-export default connection.promise();
+export default pool;
+

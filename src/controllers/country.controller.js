@@ -1,5 +1,7 @@
 import * as countryServices from "../services/country.service.js";
 
+//El controlador simplemente se encarga de recibir la respuesta del service y decir si fue satisfactoria o no
+
 export const getCountries = (req, res) => {
   countryServices
     .getCountries()
@@ -73,3 +75,5 @@ export const deleteCountry = (req, res) => {
       res.status(500).send(err);
     });
 };
+
+
